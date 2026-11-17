@@ -2,6 +2,10 @@
 
 [Home](../README.md) · [Reference](reference/README.md) · [Slides](lectures/lecture.pdf)
 
+Start with the [concept guide](concept_guide.md) if a term or operation is new.
+The explanations here and in the notebooks stand alone; slide links are optional
+source references.
+
 ## A repeatable study session
 
 1. Name the question and what one row represents.

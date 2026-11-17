@@ -2,6 +2,8 @@
 
 These are quick reminders, not substitutes for attempting the notebooks.
 
+- [Concept guide](../concept_guide.md): self-contained explanations and tiny
+  examples; the lecture PDF is optional provenance, not required reading
 - [Pandas and NumPy patterns](pandas_numpy.md): loading, inspection, selection,
   cleaning, grouping, joins, and alignment
 - [Glossary](glossary.md): recurring concepts and common confusions

@@ -8,7 +8,8 @@ or a complete machine-learning course.
 ## Start here
 
 1. Follow the [setup guide](docs/setup.md).
-2. Read the relevant [lecture slides](docs/lectures/lecture.pdf).
+2. Read the [self-contained concept guide](docs/concept_guide.md), then the
+   explanations embedded in the relevant notebook.
 3. Run the demo, attempt the assignment without opening its solution, then compare
    your reasoning—not just your output.
 4. Use the [study guide](docs/study_guide.md) for retrieval practice and the
@@ -19,7 +20,9 @@ The [dataset guide](docs/data_guide.md) describes the bundled inputs; the
 
 ## Learning map
 
-Page numbers refer to PDF pages, including section-divider slides.
+The notebooks and documentation explain the concepts directly; opening the PDF
+is optional. Page numbers below are source notes for the original lecture,
+including section-divider slides.
 
 | Topic | Slides | Demo | Practice | Solution |
 |---|---|---|---|---|
