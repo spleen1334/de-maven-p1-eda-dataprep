@@ -62,3 +62,25 @@ The correlation change fixes a reproduced pandas 2.x failure on song-title
 strings; it does not establish that every numerically encoded field is an
 appropriate correlation variable. The other excluded course cells remain
 outside these passing runtime claims.
+
+## Second explanatory pass
+
+Added a self-contained concept guide with six independently executable inline
+examples, and targeted comments tracing pivots, row masks, customer aggregates,
+dummy variables, date arithmetic, ID parsing, and event-versus-session counts.
+PDF references are optional source notes throughout the active notebooks.
+
+Checks after reconciling this pass:
+
+- All six concept-guide examples executed independently without external data.
+- All **600 code cells** across the 18 notebooks have unchanged parsed Python
+  syntax trees compared with the previous completed pass; IPython command lines
+  were excluded from Python parsing. Assignment code cells are unchanged.
+- Cell order, saved outputs, and execution counts were preserved.
+- `make check`: exit 0; four checker tests, 18 schemas, **165 local references**.
+- `make smoke`: exit 0; the same four offline solutions passed and all 26
+  datasets remained unchanged.
+- `git diff --check`: exit 0.
+
+The runtime exclusions above still apply; more explanation does not imply
+broader execution coverage.
