@@ -1,6 +1,26 @@
-# Verification scope
+# Agent and maintainer guide
 
-[Home](../README.md) · [Setup](setup.md)
+This file contains repository-maintenance conventions and historical validation
+evidence, not learning material. The learner entry point is [README.md](README.md).
+
+## Editing conventions
+
+- Preserve the demo → assignment → solution learning sequence. Do not fill
+  assignment blanks or leak answer-specific results into hints.
+- Put explanations directly in notebooks/docs; PDF references are optional
+  provenance. Use tiny inline datasets for standalone reference examples.
+- Keep supplied `data/`, lecture PDF, and archived checkpoints intact. Generated
+  outputs belong in ignored `artifacts/`.
+- Active notebooks run with their containing directory as the kernel cwd and
+  use `../../data/`. Archive notebooks retain historical paths.
+- Preserve notebook format compatibility: existing minor-4 notebooks must not
+  receive cell IDs unless the format is deliberately upgraded consistently.
+- Use the `.venv` interpreter. Run focused checks for changed material, review
+  the diff, and commit each verified logical step as requested by the user.
+- Distinguish schema/link validation, example execution, and fresh-kernel
+  notebook execution. Do not report unexecuted exclusions as passing tests.
+
+See [setup](docs/setup.md) for environment commands.
 
 ## What the checks mean
 
@@ -37,7 +57,7 @@ The installed environment is local and ignored by Git. `requirements.txt`
 specifies the baseline; `uv pip freeze --python .venv/bin/python` records the
 complete resolved environment for a particular run.
 
-## Verified baseline
+## Historical verification: initial enrichment
 
 The completed enrichment was checked on macOS with Python **3.11.18**,
 NumPy **1.26.4**, pandas **2.2.3**, nbclient **0.10.4**, and nbformat **5.11.1**.
@@ -63,7 +83,7 @@ strings; it does not establish that every numerically encoded field is an
 appropriate correlation variable. The other excluded course cells remain
 outside these passing runtime claims.
 
-## Second explanatory pass
+## Historical verification: second explanatory pass
 
 Added a self-contained concept guide with six independently executable inline
 examples, and targeted comments tracing pivots, row masks, customer aggregates,
@@ -84,3 +104,22 @@ Checks after reconciling this pass:
 
 The runtime exclusions above still apply; more explanation does not imply
 broader execution coverage.
+
+## Historical verification: reference expansion and visual explanations
+
+- Replaced the modeling warning checklist with a worked customer-table lesson.
+- Expanded the patterns reference and glossary based on methods/concepts found
+  in the active notebooks, without claiming complete library coverage.
+- Executed 21 documentation Python blocks independently: six concept-guide,
+  fourteen patterns, and one modeling-table example; all passed with inline data.
+- Rendered all five Mermaid blocks using `mmdc` and the installed Chrome browser.
+  The CLI's default headless-shell binary was unavailable; an explicit
+  `executablePath` in a local Puppeteer configuration resolved rendering.
+  Rendered artifacts/configuration are ignored under `artifacts/mermaid/`.
+- `make check`: exit 0; four tests, 18 notebook schemas, 170 local references.
+- Compared all notebook code cells with their pre-change Git versions: identical.
+  Notebook changes were mechanical Markdown link/label updates only.
+- `git diff --check`: exit 0.
+
+No new fresh-kernel notebook run was needed for these documentation-only changes;
+the earlier smoke results are historical evidence, not a newly expanded claim.

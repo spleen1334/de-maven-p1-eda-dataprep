@@ -119,4 +119,6 @@ uv pip freeze --python .venv/bin/python
 git status --short
 ```
 
-See [verification notes](verification.md) for the actual checked scope and limits.
+`make smoke` checks four selected offline solution notebooks, not every course
+cell. External-service examples and deliberately invalid-path demonstrations
+remain outside that check.

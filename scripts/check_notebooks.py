@@ -94,7 +94,8 @@ def main():
             except ValueError as exc:
                 errors.append(f"{rel}: cell {index}: {exc}")
     # Documentation navigation is part of the local link graph; archive is excluded.
-    markdown = [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md"))]
+    markdown = [ROOT / "README.md", ROOT / "AGENTS.md",
+                *sorted((ROOT / "docs").rglob("*.md"))]
     for path in markdown:
         if not path.exists():
             continue
