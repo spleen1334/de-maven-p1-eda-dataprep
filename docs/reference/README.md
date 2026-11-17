@@ -4,10 +4,11 @@ These are quick reminders, not substitutes for attempting the notebooks.
 
 - [Concept guide](../concept_guide.md): self-contained explanations and tiny
   examples; the lecture PDF is optional provenance, not required reading
-- [Pandas and NumPy patterns](pandas_numpy.md): loading, inspection, selection,
-  cleaning, grouping, joins, and alignment
+- [Pandas and NumPy patterns](pandas_numpy.md): worked patterns for loading,
+  selection, cleaning, grouping, reshaping, dates, joins, arrays, and plotting
 - [Glossary](glossary.md): recurring concepts and common confusions
-- [Modeling safeguards](modeling_safeguards.md): grain, leakage, and validation
+- [Modeling preparation](modeling_preparation.md): build a customer-level table
+  from event history, define the outcome, and check feature ownership and timing
 - [Study guide](../study_guide.md): retrieval practice and decision logs
 
 Official references:

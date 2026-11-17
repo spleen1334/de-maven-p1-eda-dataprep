@@ -15,8 +15,7 @@ or a complete machine-learning course.
 4. Use the [study guide](docs/study_guide.md) for retrieval practice and the
    [reference index](docs/reference/README.md) when you need a reminder.
 
-The [dataset guide](docs/data_guide.md) describes the bundled inputs; the
-[verification notes](docs/verification.md) distinguish checks from untested examples.
+The [dataset guide](docs/data_guide.md) describes the bundled inputs.
 
 ## Learning map
 
@@ -64,7 +63,7 @@ not inherently from the file's location. See [setup](docs/setup.md).
 - Saved outputs reflect previous runs. Restart the kernel and run in order when
   checking your work; a displayed result is not proof that a clean run succeeds.
 - The course's “numeric, non-null single table” is a teaching target, not a
-  universal rule for every model. Review [modeling safeguards](docs/reference/modeling_safeguards.md).
+  universal rule for every model. Review [modeling preparation](docs/reference/modeling_preparation.md).
 
 ## Attribution and rights
 

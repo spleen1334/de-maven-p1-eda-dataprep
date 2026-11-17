@@ -8,6 +8,10 @@ are included inline and do not require the lecture PDF, remote websites, or
 course data files. Code blocks are independent examples, not assignment answers.
 PDF page numbers are optional source notes only.
 
+Mermaid diagrams provide visual summaries alongside the explanations. If your
+Markdown viewer does not render Mermaid, the surrounding text carries the same
+meaning; no diagram is required to run an example.
+
 ## 1. Scope the question before choosing operations
 
 Data preparation is not simply “remove all errors.” A useful workflow is:
@@ -17,6 +21,23 @@ exploration → preparation for a particular next step.**
 
 These stages are iterative: an unexpected pattern can reveal a source problem
 or a poorly defined question.
+
+```mermaid
+flowchart TD
+    decision["Business decision and audience"] --> question["Define the question, population, and success criterion"]
+    question --> contract["Specify row grain, required fields, and time coverage"]
+    contract --> gather["Gather and inspect sources"]
+    gather --> quality["Investigate data quality and document treatments"]
+    quality --> explore["Explore distributions and relationships"]
+    explore --> findings["Communicate evidence, scope, and limitations"]
+    explore --> prepare["Prepare features if future modeling is the goal"]
+    quality -. "Missing or unsuitable evidence" .-> contract
+    explore -. "Refine the question" .-> question
+```
+
+The two endpoints serve different purposes: communicating an EDA finding does
+not require training a model, and preparing features does not establish that a
+model predicts well. Neither endpoint proves causation.
 
 For example, “Why are customers leaving?” is too broad to determine a table.
 First specify:
@@ -88,6 +109,22 @@ the distribution. Mean imputation can reduce variability and distort
 relationships. A categorical field may need an explicit unknown state rather
 than a numeric replacement. Record why a treatment is justified and compare
 results under a reasonable alternative.
+
+```mermaid
+flowchart TD
+    detect["Detect a missing value"] --> interpret["Determine meaning: unknown, not applicable, or collection failure"]
+    interpret --> verify{"Can a reliable source supply the value?"}
+    verify -->|Yes| correct["Restore the verified value and record provenance"]
+    verify -->|No| compare["Compare retaining, excluding, and imputing"]
+    compare --> justify["Choose a question-specific rule and record uncertainty"]
+    correct --> check["Recheck coverage, distributions, and affected groups"]
+    justify --> check
+    check --> sensitivity["Assess whether a reasonable alternative changes the conclusion"]
+```
+
+This is a decision process, not an instruction to impute every unknown. An
+observed zero is already a value; it should not enter this flow merely because
+it looks inconvenient.
 
 ### Duplicates and outliers
 
@@ -180,6 +217,20 @@ Duplicate lookup keys can multiply purchase rows and inflate later totals.
 An inner join keeps matched keys, a left join keeps left-side records, and an
 outer join retains both sides' keys. All can expand under duplicate matches.
 
+```mermaid
+flowchart LR
+    purchases["Purchases: item IDs 1, 1, 2<br/>3 rows"] --> safe["Left merge on item_id<br/>validate many_to_one"]
+    unique["Catalog: one row per key<br/>IDs 1, 2"] --> safe
+    safe --> expected["3 enriched purchase rows"]
+    purchases --> unchecked["Left merge without validation"]
+    duplicate["Catalog with duplicate key<br/>IDs 1, 1, 2"] --> unchecked
+    unchecked --> expanded["5 rows: each item 1 purchase matches twice"]
+```
+
+In the lower branch, summing purchase amounts after the join can double-count
+the item 1 purchases. Applying `validate="many_to_one"` to that duplicate-key
+catalog rejects the merge instead of silently accepting the five rows.
+
 An index is not automatically a business key. Series assignment and horizontal
 concatenation commonly align index labels—even when the rows happen to be
 different customers. Equal lengths do not prove correct identity. Preserve keys
@@ -207,6 +258,19 @@ counts = with_ids.groupby("customer").sum() # two customer rows
 turns indicators into counts: A has one book event and one pen event. These are
 not necessarily quantities bought, unique products, or preference scores.
 
+```mermaid
+flowchart TD
+    events["3 event rows<br/>A-book, A-pen, B-book"] --> indicators["get_dummies: 3 indicator rows<br/>One column per category"]
+    indicators --> attach["Attach customer IDs by the same event-row index"]
+    attach --> aggregate["Group by customer and sum indicators"]
+    aggregate --> counts["2 customer rows<br/>A: book 1, pen 1<br/>B: book 1, pen 0"]
+    counts --> keys["Keep the customer key for later merges"]
+```
+
+The grain changes only at the grouping step. Before it, a row is an event;
+after it, a row is a customer. The diagram uses the same inline data as the
+example, so the row counts can be checked directly.
+
 For a share, numerator and denominator must count compatible units over the
 same window. With zero total activity the ratio is undefined; decide how to
 represent no history rather than pretending the preference was observed as 0%.
@@ -226,7 +290,7 @@ Before future modeling, check:
 5. Training-only fitting of preprocessing and appropriate held-out evaluation
 
 A non-null numeric table is the course's teaching target, not proof of readiness
-for every estimator. See [modeling safeguards](reference/modeling_safeguards.md)
+for every estimator. See [modeling preparation](reference/modeling_preparation.md)
 for the training and timing boundary.
 
 *Optional lecture source: PDF pp. 177–196.*
