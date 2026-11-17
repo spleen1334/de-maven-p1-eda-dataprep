@@ -1,0 +1,8 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+artifacts/
+.env
+.env.*
+!.env.example
