@@ -4,6 +4,7 @@
 __pycache__/
 .DS_Store
 artifacts/
+/docs/lectures/lecture.pdf
 .env
 .env.*
 !.env.example
