@@ -109,6 +109,38 @@ coverage assumption**, not merely “a join produced a null.”
 The result has A's historical spend of 30 and B's of 5. Their recencies are
 20 and 12 days. June spend never enters those features.
 
+### From purchase rows to RFM features
+
+**RFM** stands for **recency, frequency, and monetary value**. It summarizes
+how recently a customer purchased, how often they purchased within the chosen
+history window, and how much they spent in that window. The worked example
+uses April and May history and computes recency as of June 1.
+
+**Purchase history — one row per purchase**
+
+| Customer | Purchase date | Amount |
+|---|---|---:|
+| A | Apr 10 | 10 |
+| A | May 12 | 20 |
+| B | May 20 | 5 |
+
+**Feature table at June 1 — one row per customer**
+
+| Customer | Recency (days) | Frequency (purchases) | Monetary value |
+|---|---:|---:|---:|
+| A | 20 | 2 | 30 |
+| B | 12 | 1 | 5 |
+
+B purchased more recently, but A purchased more often and spent more. None of
+these facts tells you by itself who will purchase next. If the source has one
+row per item rather than one per purchase, count distinct purchase IDs instead
+of counting rows. If an eligible customer has no observed purchase, recency
+is undefined, not zero days.
+
+Keep the event table for questions about individual purchases and use the
+summarized table for questions at customer grain. Neither long nor wide is
+always better: the right shape depends on what each row needs to represent.
+
 ## 4. Add features without changing row ownership
 
 Common feature families have different meanings:
@@ -149,6 +181,27 @@ not a universal requirement for every estimator.
 Before fitting an ML model, separate training data from evaluation data.
 Learn imputation values, scaling parameters, category vocabularies, and feature
 selection from training data only, then reuse them on held-out data.
+
+```mermaid
+flowchart TD
+    split["Split records before learning preprocessing"]
+    split --> train["Training records"]
+    split --> heldout["Held-out records"]
+    train --> fit["Learn preprocessing from training data"]
+    fit --> train_ready["Transform training inputs"]
+    fit --> eval_ready["Apply unchanged preprocessing to held-out inputs"]
+    heldout --> eval_ready
+    train_ready --> model["Fit model with training outcomes"]
+    model --> scores["Predict held-out outcomes"]
+    eval_ready --> scores
+    scores --> evaluate["Compare predictions with actual held-out outcomes"]
+    heldout --> evaluate
+```
+
+For example, if the median spend in training is 30, use 30 to fill missing
+spend in both sets. Do not calculate a new median from the held-out set. Its
+outcomes are used to score predictions, not to choose features or tune the
+model if it is your final test set.
 
 Use a split matching the future use case. Random rows can be misleading for
 time-dependent outcomes or repeated observations of the same customer.

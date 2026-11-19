@@ -53,6 +53,37 @@ Describing cancellation patterns is EDA. Predicting future cancellation is a
 different task requiring a prediction cutoff, future outcome window, and
 evaluation. Neither automatically establishes what causes cancellation.
 
+### Choose an approach before collecting more data
+
+Start with what the team can actually change. If customers report that
+cancelling or renewing is confusing, observing a few people use the service
+may reveal a process problem a model would not fix. If the team needs to know
+when cancellations peak, start with descriptive analysis. Consider modeling
+when its output would inform a concrete decision.
+
+```mermaid
+flowchart TD
+    decision["What decision needs support?"]
+    decision --> friction["Understand a reported problem: observe or interview"]
+    decision --> counts["Describe recorded behavior: use EDA"]
+    decision --> predict["Predict a known outcome: supervised learning"]
+    decision --> group["Find groups without a target: unsupervised learning"]
+```
+
+**Supervised learning** uses examples with a known target. To prioritize future
+outreach, the team could learn from past customers whose later cancellation
+status is known. **Unsupervised learning** looks for structure without a target
+for the task. The team could group customers by listening behavior to explore
+different usage patterns. Those groups are not predictions of who will cancel
+and depend on how listening behavior is measured.
+
+Start with the smallest population, time window, and set of sources that can
+credibly support the decision. For example, an initial analysis of one renewal
+cycle might help the outreach team decide what to investigate next, but it
+cannot establish a seasonal pattern. Review the initial result with the people
+who will use it, then expand the scope when it leaves an important question
+unanswered.
+
 *Optional lecture source: PDF pp. 7–40.*
 
 ## 2. Understand the table you loaded
