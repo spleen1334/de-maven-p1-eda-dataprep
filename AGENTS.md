@@ -7,8 +7,11 @@ evidence, not learning material. The learner entry point is [README.md](README.m
 
 - Preserve the demo → assignment → solution learning sequence. Do not fill
   assignment blanks or leak answer-specific results into hints.
-- Put explanations directly in notebooks/docs; PDF references are optional
-  provenance. Use tiny inline datasets for standalone reference examples.
+- Teach every essential concept, assumption, and interpretation directly in a
+  notebook or tracked documentation. A learner without the lecture PDF must
+  still be able to follow the lesson and complete the exercises. Cite the PDF
+  only as optional provenance, never in place of an explanation. Use tiny inline
+  datasets for standalone reference examples.
 - Keep supplied `data/`, lecture PDF, and archived checkpoints intact. Generated
   outputs belong in ignored `artifacts/`.
 - Active notebooks run with their containing directory as the kernel cwd and

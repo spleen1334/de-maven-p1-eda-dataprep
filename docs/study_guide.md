@@ -1,10 +1,10 @@
 # Study guide
 
-[Home](../README.md) · [Reference](reference/README.md) · [Slides](lectures/lecture.pdf)
+[Home](../README.md) · [Reference](reference/README.md)
 
 Start with the [concept guide](concept_guide.md) if a term or operation is new.
-The explanations here and in the notebooks stand alone; slide links are optional
-source references.
+The explanations here and in the notebooks stand alone; slide numbers are
+optional source references.
 
 ## A repeatable study session
 

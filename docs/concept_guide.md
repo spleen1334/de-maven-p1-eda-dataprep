@@ -81,6 +81,14 @@ database contains tables queried through SQL; connecting is not the same as
 loading a DataFrame. A successful read can still have the wrong delimiter,
 sheet, date interpretation, or identifier type.
 
+The source's structure tells you how much work is needed before you have a
+table. **Structured** data, such as a database table, has defined fields.
+**Semi-structured** data, such as JSON events, has named fields but can vary
+between records or contain nested lists. Decide whether a row represents an
+event or one item in its list before flattening it. **Unstructured** data, such
+as free-text reviews, doesn't already have the fields you want to analyze:
+you might need to extract a feature such as review length or topic first.
+
 Relative paths are interpreted from the running process's working directory.
 Changing the notebook's folder does not automatically repair a kernel already
 running elsewhere. Check the working directory before changing filenames.
@@ -188,6 +196,13 @@ Choose a chart to answer a question:
 - **Bar chart:** compare defined summaries across categories.
 - **Line plot:** change over an ordered dimension such as time.
 - **Scatterplot/pairplot:** numerical relationships, clusters, and unusual points.
+
+**Skew** is asymmetry, named for the longer tail, not where most observations
+sit. Wait times of `2, 3, 3, 4, 18` minutes have a right tail: most waits are
+short, but the 18-minute wait pulls the mean up to 6 minutes while the median
+stays at 3. A left-skewed distribution has the longer tail on the low-value
+side. Check the histogram and report the median alongside the mean when the
+choice matters; a long tail alone doesn't make observations errors.
 
 Label units and population. Correlation describes association, often linear;
 it is not proof of causation, and a small correlation can hide nonlinear
