@@ -47,7 +47,9 @@ print(Path.cwd())
 The executable should belong to this repository's `.venv`. For active course
 notebooks, the working directory should be their containing folder, such as
 `notebooks/demos/`, **not the repository root**. Local paths such as
-`../../data/course_offerings.csv` resolve from that directory.
+`../../data/course_offerings.csv` resolve from that directory. Exercise
+solutions are one level deeper in `notebooks/exercises/solutions/`, so their
+input paths start with `../../../data/`.
 
 JupyterLab normally starts a new notebook kernel in its containing directory.
 If you changed directories manually, restart the kernel and check again.

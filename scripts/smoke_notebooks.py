@@ -34,7 +34,7 @@ def main():
               "versions": {name: importlib.metadata.version(name)
                            for name in ("numpy", "pandas", "nbclient", "nbformat")}}
     for name in SELECTED:
-        path = ROOT / "notebooks" / "solutions" / f"{name}.ipynb"
+        path = ROOT / "notebooks" / "exercises" / "solutions" / f"{name}.ipynb"
         source_bytes = path.read_bytes()
         notebook = nbformat.reads(source_bytes.decode("utf-8"), as_version=4)
         result = {"source": path.relative_to(ROOT).as_posix(), "status": "passed",

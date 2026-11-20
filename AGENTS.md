@@ -14,8 +14,9 @@ evidence, not learning material. The learner entry point is [README.md](README.m
   datasets for standalone reference examples.
 - Keep supplied `data/`, lecture PDF, and archived checkpoints intact. Generated
   outputs belong in ignored `artifacts/`.
-- Active notebooks run with their containing directory as the kernel cwd and
-  use `../../data/`. Archive notebooks retain historical paths.
+- Active notebooks run with their containing directory as the kernel cwd.
+  Use `../../data/` from most notebooks and `../../../data/` from
+  `notebooks/exercises/solutions/`. Archive notebooks retain historical paths.
 - Preserve notebook format compatibility: existing minor-4 notebooks must not
   receive cell IDs unless the format is deliberately upgraded consistently.
 - Use the `.venv` interpreter. Run focused checks for changed material, review

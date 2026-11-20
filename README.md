@@ -26,11 +26,11 @@ learn the material and complete the exercises without the slides.
 |---|---|---|---|---|
 | Data science and scoping | 7–40 | [Concept guide](docs/concept_guide.md#1-scope-the-question-before-choosing-operations) | Define a question, audience, and data requirements | — |
 | Jupyter basics | 41–61 | [First notebook exercise](docs/setup.md#first-notebook-exercise) | Create Markdown and code cells; restart a kernel | — |
-| Gathering | 62–76 | [Demo](notebooks/demos/section04_gathering_data_code.ipynb) | [Assignment](notebooks/assignments/section04_assignments.ipynb) | [Solution](notebooks/solutions/section04_solutions.ipynb) |
-| Cleaning | 77–131 | [Demo](notebooks/demos/section05_cleaning_data_code.ipynb) | [Assignment](notebooks/assignments/section05_assignments.ipynb) | [Solution](notebooks/solutions/section05_solutions.ipynb) |
-| Exploring | 132–160 | [EDA demo](notebooks/demos/section06_exploratory_data_analysis_code.ipynb) | [Assignment](notebooks/assignments/section06_exploring_data_assignment.ipynb) | [Solution](notebooks/solutions/section06_exploring_data_solution.ipynb) |
-| Visualizing | 132–160 | Same EDA demo | [Assignment](notebooks/assignments/section06_visualizing_data_assignments.ipynb) | [Solution](notebooks/solutions/section06_visualizing_data_solutions.ipynb) |
-| Modeling preparation | 163–193 | [Demo](notebooks/demos/section08_preparing_for_modeling_code.ipynb) | [Assignment](notebooks/assignments/section08_prepping_for_modeling_assignments.ipynb) | [Solution](notebooks/solutions/section08_prepping_for_modeling_solutions.ipynb) |
+| Gathering | 62–76 | [Demo](notebooks/demos/section04_gathering_data_code.ipynb) | [Exercise](notebooks/exercises/section04_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section04_solutions.ipynb) |
+| Cleaning | 77–131 | [Demo](notebooks/demos/section05_cleaning_data_code.ipynb) | [Exercise](notebooks/exercises/section05_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section05_solutions.ipynb) |
+| Exploring | 132–160 | [EDA demo](notebooks/demos/section06_exploratory_data_analysis_code.ipynb) | [Exercise](notebooks/exercises/section06_exploring_data_assignment.ipynb) | [Solution](notebooks/exercises/solutions/section06_exploring_data_solution.ipynb) |
+| Visualizing | 132–160 | Same EDA demo | [Exercise](notebooks/exercises/section06_visualizing_data_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section06_visualizing_data_solutions.ipynb) |
+| Modeling preparation | 163–193 | [Demo](notebooks/demos/section08_preparing_for_modeling_code.ipynb) | [Exercise](notebooks/exercises/section08_prepping_for_modeling_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section08_prepping_for_modeling_solutions.ipynb) |
 
 ## Projects
 

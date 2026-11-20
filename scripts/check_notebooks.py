@@ -66,7 +66,11 @@ def input_paths(source):
 
 def main():
     errors = []
-    notebooks = sorted((ROOT / "notebooks").glob("*/*.ipynb"))
+    notebook_root = ROOT / "notebooks"
+    notebooks = sorted(
+        path for path in notebook_root.rglob("*.ipynb")
+        if not any(part.startswith(".") for part in path.relative_to(notebook_root).parts)
+    )
     if len(notebooks) != EXPECTED_NOTEBOOKS:
         errors.append(f"expected {EXPECTED_NOTEBOOKS} primary notebooks, found {len(notebooks)}")
     references = 0
