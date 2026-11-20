@@ -30,6 +30,14 @@ learn the material and complete the exercises without the slides.
 | Cleaning | 77–131 | [Demo](notebooks/demos/section05_cleaning_data_code.ipynb) | [Assignment](notebooks/assignments/section05_assignments.ipynb) | [Solution](notebooks/solutions/section05_solutions.ipynb) |
 | Exploring | 132–160 | [EDA demo](notebooks/demos/section06_exploratory_data_analysis_code.ipynb) | [Assignment](notebooks/assignments/section06_exploring_data_assignment.ipynb) | [Solution](notebooks/solutions/section06_exploring_data_solution.ipynb) |
 | Visualizing | 132–160 | Same EDA demo | [Assignment](notebooks/assignments/section06_visualizing_data_assignments.ipynb) | [Solution](notebooks/solutions/section06_visualizing_data_solutions.ipynb) |
-| Rotten Tomatoes project | 161–162 | — | [Project](notebooks/assignments/section07_midcourse_project.ipynb) | [Solution](notebooks/solutions/section07_midcourse_project_solutions.ipynb) |
 | Modeling preparation | 163–193 | [Demo](notebooks/demos/section08_preparing_for_modeling_code.ipynb) | [Assignment](notebooks/assignments/section08_prepping_for_modeling_assignments.ipynb) | [Solution](notebooks/solutions/section08_prepping_for_modeling_solutions.ipynb) |
-| Maven Music project | 194–196 | — | [Project](notebooks/assignments/section09_final_project.ipynb) | [Solution](notebooks/solutions/section09_final_project_solutions.ipynb) |
+
+## Projects
+
+Project notebooks and their solutions are in [`notebooks/projects/`](notebooks/projects/).
+Attempt each project before opening its solution.
+
+| Project | When to start | Slides | Solution |
+|---|---|---|---|
+| [Rotten Tomatoes (mid-course)](notebooks/projects/section07_midcourse_project.ipynb) | After Visualizing, before Modeling preparation | 161–162 | [Solution](notebooks/projects/section07_midcourse_project_solutions.ipynb) |
+| [Maven Music (final)](notebooks/projects/section09_final_project.ipynb) | After Modeling preparation | 194–196 | [Solution](notebooks/projects/section09_final_project_solutions.ipynb) |
