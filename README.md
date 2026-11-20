@@ -7,8 +7,9 @@ exploring, and preparing data with pandas, NumPy, and seaborn.
 ## Start here
 
 1. Follow the [setup guide](docs/setup.md).
-2. Read the [self-contained concept guide](docs/concept_guide.md), then the
-   explanations embedded in the relevant notebook.
+2. Read the [foundations lectures](docs/lectures/README.md) for the opening
+   topics. Use the [concept guide](docs/concept_guide.md) and the explanations
+   in each notebook as you work through the demos.
 3. Run the demo, attempt the assignment without opening its solution, then compare
    your reasoning—not just your output.
 4. Use the [study guide](docs/study_guide.md) for retrieval practice and the
@@ -24,8 +25,9 @@ learn the material and complete the exercises without the slides.
 
 | Topic | Slides | Demo | Practice | Solution |
 |---|---|---|---|---|
-| Data science and scoping | 7–40 | [Concept guide](docs/concept_guide.md#1-scope-the-question-before-choosing-operations) | Define a question, audience, and data requirements | — |
-| Jupyter basics | 41–61 | [First notebook exercise](docs/setup.md#first-notebook-exercise) | Create Markdown and code cells; restart a kernel | — |
+| 01 · Intro to data science | 7–22 | [Lecture](docs/lectures/01-intro-to-data-science.md) | Decide when exploration is enough | — |
+| 02 · Scoping a project | 23–40 | [Lecture](docs/lectures/02-scoping-a-project.md) | Define a question, audience, and data requirements | — |
+| 03 · Jupyter basics | 41–61 | [Lecture and first notebook exercise](docs/lectures/03-jupyter-notebooks.md) | Create Markdown and code cells; restart a kernel | — |
 | Gathering | 62–76 | [Demo](notebooks/demos/section04_gathering_data_code.ipynb) | [Exercise](notebooks/exercises/section04_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section04_solutions.ipynb) |
 | Cleaning | 77–131 | [Demo](notebooks/demos/section05_cleaning_data_code.ipynb) | [Exercise](notebooks/exercises/section05_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section05_solutions.ipynb) |
 | Exploring | 132–160 | [EDA demo](notebooks/demos/section06_exploratory_data_analysis_code.ipynb) | [Exercise](notebooks/exercises/section06_exploring_data_assignment.ipynb) | [Solution](notebooks/exercises/solutions/section06_exploring_data_solution.ipynb) |

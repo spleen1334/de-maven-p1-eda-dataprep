@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" role="img" aria-labelledby="title desc">
+  <title id="title">How a Jupyter notebook runs</title>
+  <desc id="desc">A learner uses a browser interface, which communicates with a Jupyter server. The server reads and saves a notebook file containing cells and saved outputs, and sends Python code to a live kernel. The kernel holds variables in memory and returns output through the server to the interface.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34516a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="530" rx="20" fill="#f7f8f5"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" fill="#172c3b">
+    <text x="38" y="42" font-size="21" font-weight="700">A notebook has a file and a live session</text>
+    <text x="38" y="67" font-size="14" fill="#465d6b">The server connects what you see, what is saved, and what is running.</text>
+
+    <!-- The learner and the visible interface -->
+    <rect x="38" y="112" width="154" height="112" rx="12" fill="#e7efec" stroke="#6c9184" stroke-width="2"/>
+    <circle cx="75" cy="151" r="14" fill="none" stroke="#285b4e" stroke-width="3"/>
+    <path d="M53 191c2-16 10-24 22-24s20 8 22 24" fill="none" stroke="#285b4e" stroke-width="3" stroke-linecap="round"/>
+    <text x="110" y="153" font-size="16" font-weight="700">Learner</text>
+    <text x="110" y="174" font-size="13" fill="#465d6b">writes &amp;</text>
+    <text x="110" y="191" font-size="13" fill="#465d6b">runs cells</text>
+
+    <path d="M205 168H252" stroke="#34516a" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <rect x="265" y="100" width="300" height="136" rx="12" fill="#fff" stroke="#6f8795" stroke-width="2"/>
+    <path d="M265 130h300" stroke="#c2d0d6" stroke-width="2"/>
+    <circle cx="284" cy="115" r="4" fill="#c15f40"/>
+    <circle cx="298" cy="115" r="4" fill="#d69c48"/>
+    <circle cx="312" cy="115" r="4" fill="#6c9184"/>
+    <text x="285" y="158" font-size="17" font-weight="700">Browser / JupyterLab</text>
+    <text x="285" y="182" font-size="14" fill="#465d6b">Notebook interface</text>
+    <text x="285" y="204" font-size="13" fill="#465d6b">Edit cells, run code, see output</text>
+
+    <path d="M415 250v54" stroke="#34516a" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="430" y="282" font-size="13" fill="#34516a">requests &amp; results</text>
+
+    <!-- The server mediates both persistence and execution -->
+    <rect x="265" y="318" width="300" height="82" rx="12" fill="#dce9ef" stroke="#66899a" stroke-width="2"/>
+    <text x="285" y="351" font-size="17" font-weight="700">Jupyter server</text>
+    <text x="285" y="375" font-size="14" fill="#34516a">Connects the interface to file and kernel</text>
+
+    <path d="M252 359H207" stroke="#34516a" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="210" y="344" font-size="12" fill="#34516a">read / save</text>
+    <rect x="38" y="318" width="155" height="146" rx="12" fill="#fff" stroke="#a89172" stroke-width="2"/>
+    <text x="55" y="349" font-size="16" font-weight="700">Notebook file</text>
+    <text x="55" y="372" font-size="14" font-family="monospace">.ipynb</text>
+    <path d="M55 385h120" stroke="#ddd3c3"/>
+    <text x="55" y="408" font-size="13" fill="#465d6b">Cells and</text>
+    <text x="55" y="427" font-size="13" fill="#465d6b">saved outputs</text>
+    <text x="55" y="449" font-size="12" fill="#6c5840">On disk</text>
+
+    <path d="M579 345h55" stroke="#34516a" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M634 375h-55" stroke="#34516a" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="586" y="332" font-size="12" fill="#34516a">code</text>
+    <text x="584" y="397" font-size="12" fill="#34516a">output</text>
+    <rect x="647" y="318" width="215" height="146" rx="12" fill="#fff" stroke="#bc826d" stroke-width="2"/>
+    <text x="666" y="349" font-size="16" font-weight="700">Python kernel</text>
+    <text x="666" y="373" font-size="14" fill="#465d6b">Runs Python code</text>
+    <path d="M666 385h176" stroke="#ead3ca"/>
+    <text x="666" y="408" font-size="13" fill="#465d6b">Variables in memory</text>
+    <text x="666" y="449" font-size="12" fill="#864b37">Live session</text>
+    <text x="38" y="503" font-size="13" fill="#465d6b">Saved notebook contents and live kernel memory are not the same thing.</text>
+  </g>
+</svg>

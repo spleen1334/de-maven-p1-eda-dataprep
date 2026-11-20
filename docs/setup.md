@@ -57,18 +57,8 @@ Notebook terminals and the server process may have different working directories
 
 ## First notebook exercise
 
-Open a new Python notebook in JupyterLab. Set the first cell's type to
-**Markdown**, type `# My first notebook`, and press **Shift+Enter** to render the
-heading. In a **Code** cell below it, enter `songs = 3`. In a second code cell,
-enter `print(songs * 2)`. Run the code cells in order: the second should display
-`6`.
-
-The notebook stores your cells; the **kernel** is the running Python process
-that remembers variables between executions. Use **Kernel → Restart Kernel**
-and run only the `print` cell. It raises `NameError` because the new kernel has
-not run `songs = 3`. A displayed result can be left over from an earlier run,
-so restart and run cells from the top when checking whether a notebook works
-without hidden state.
+Follow the [first notebook exercise](lectures/03-jupyter-notebooks.md#try-it-saved-output-versus-live-state)
+to practice running cells and see what a kernel restart does.
 
 ## Commands
 
