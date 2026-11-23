@@ -9,4 +9,5 @@ matplotlib>=3.9,<3.11
 seaborn>=0.13.2,<0.14
 openpyxl>=3.1.5,<4
 lxml>=5.3,<7
+scikit-learn>=1.7,<1.8
 # mysql-connector-python is optional; not needed by offline notebooks.
