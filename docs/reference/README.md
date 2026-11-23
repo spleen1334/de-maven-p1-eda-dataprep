@@ -9,6 +9,8 @@ These are quick reminders, not substitutes for attempting the notebooks.
 - [Glossary](glossary.md): recurring concepts and common confusions
 - [Modeling preparation](modeling_preparation.md): build a customer-level table
   from event history, define the outcome, and check feature ownership and timing
+- [Preparing data for modeling: examples and checklist](modeling_ready_checklist.md):
+  short examples of joins, dates, encoding, and feature engineering
 - [Study guide](../study_guide.md): retrieval practice and decision logs
 
 Official references:

@@ -8,6 +8,9 @@ not a model-training tutorial. It explains what the final table represents,
 how to construct it, and why some choices matter. The final checklist supports
 the walkthrough rather than replacing it.
 
+For short examples of joins, encoding, date features, and scaling, see the
+[modeling preparation checklist](modeling_ready_checklist.md).
+
 ## 1. Turn a business question into a table specification
 
 Consider: **How many purchases will each eligible customer make in June?**

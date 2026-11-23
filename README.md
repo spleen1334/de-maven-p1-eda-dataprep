@@ -32,7 +32,7 @@ learn the material and complete the exercises without the slides.
 | Cleaning | 77–131 | [Demo](notebooks/demos/section05_cleaning_data_code.ipynb) | [Exercise](notebooks/exercises/section05_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section05_solutions.ipynb) |
 | Exploring | 132–160 | [EDA demo](notebooks/demos/section06_exploratory_data_analysis_code.ipynb) | [Exercise](notebooks/exercises/section06_exploring_data_assignment.ipynb) | [Solution](notebooks/exercises/solutions/section06_exploring_data_solution.ipynb) |
 | Visualizing | 132–160 | Same EDA demo | [Exercise](notebooks/exercises/section06_visualizing_data_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section06_visualizing_data_solutions.ipynb) |
-| Modeling preparation | 163–193 | [Demo](notebooks/demos/section08_preparing_for_modeling_code.ipynb) | [Exercise](notebooks/exercises/section08_prepping_for_modeling_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section08_prepping_for_modeling_solutions.ipynb) |
+| Modeling preparation · [Examples and checklist](docs/reference/modeling_ready_checklist.md) | 163–193 | [Demo](notebooks/demos/section08_preparing_for_modeling_code.ipynb) | [Exercise](notebooks/exercises/section08_prepping_for_modeling_assignments.ipynb) | [Solution](notebooks/exercises/solutions/section08_prepping_for_modeling_solutions.ipynb) |
 
 ## Projects
 
